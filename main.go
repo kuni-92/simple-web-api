@@ -9,6 +9,7 @@ import (
 
 func main() {
 	http.HandleFunc("/api", api.HandlerMain)
+	http.HandleFunc("/json", api.HandlerJson)
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Println("Server error. process exit.")
 	}
